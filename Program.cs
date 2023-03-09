@@ -36,12 +36,20 @@ double DistanceAtoB(double[] a, double[] b)
     return result;
 }
 
+void Cube1toN(int N)
+{
+    for (int i = 1; i <= N; i++)
+    {
+        System.Console.WriteLine($"i = {i}, Cube i = {Math.Pow(i, 3)}");
+    }
+}
+
 // Task 1
 /*
 Console.WriteLine(Palindrom(TakeDigit("Enter a = ")));
 */
 // Task 2
-
+/*
 double[] FirstPoint = new double[3];
 ArrayCoord(FirstPoint);
 
@@ -49,4 +57,8 @@ double[] SecondPoint = new double[3];
 ArrayCoord(SecondPoint);
 
 System.Console.WriteLine("Distance = " + DistanceAtoB(FirstPoint, SecondPoint));
+*/
+// Task 3
 
+int n = TakeDigit("Input N = ");
+Cube1toN(n);
