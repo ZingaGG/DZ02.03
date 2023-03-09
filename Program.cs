@@ -15,10 +15,19 @@ double TakeDigitDouble(string a)
 
 bool Palindrom(int a)
 {
+    int temp = a/10;
+
     int lastDigit = a % 10;
     a = a / 10000;
     int firstDigit = a % 10;
-    return (lastDigit == firstDigit);
+
+    int preLastDigit = temp % 10;
+    temp = temp / 100;
+    int SecondDigit = temp % 10;
+    
+
+    return ((lastDigit == firstDigit) && (preLastDigit == SecondDigit));
+
 }
 
 double[] ArrayCoord(double[] a)
@@ -45,9 +54,9 @@ void Cube1toN(int N)
 }
 
 // Task 1
-/*
+
 Console.WriteLine(Palindrom(TakeDigit("Enter a = ")));
-*/
+
 // Task 2
 /*
 double[] FirstPoint = new double[3];
@@ -59,6 +68,7 @@ ArrayCoord(SecondPoint);
 System.Console.WriteLine("Distance = " + DistanceAtoB(FirstPoint, SecondPoint));
 */
 // Task 3
-
+/*
 int n = TakeDigit("Input N = ");
 Cube1toN(n);
+*/
